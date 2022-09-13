@@ -1,3 +1,54 @@
+timer_counter = 0;
+timer_check = "";
+drawn_sketch = "";
+answer_holder = "";
+score = 0;
+
+
+function setup()
+{
+    canvas = createCanvas(280,280);
+    canvas.center();
+    background("white");
+}
+
+
+function draw()
+{
+    check_sketch();
+    if(drawn_sketch==sketch)
+    {
+        score = score + 1;
+        document.getElementById("score").value = "Score : " + score;
+    }
+}
+
+
+function check_sketch()
+{
+    timer_counter = timer_counter++;
+    document.getElementById("timer").value = "Timer : " + timer_counter;
+    if(timer_counter > 500)
+    {
+        timer_counter = 0;
+        timer_check = "completed";
+    }
+
+    if(timer_check=="completed"||answer_holder=="set")
+    {
+        timer_check = "";
+        answer_holder ="";
+        updateCanvas();
+    }
+}
+
+
+function updateCanvas()
+{
+    background("white");
+}
+
+
 quick_draw_data_set=["aircraft carrier","airplane","alarm clock","ambulance","angel","animal migration",
 "ant","anvil","apple","arm","asparagus","axe","backpack","banana","bandage","barn","baseball","baseball bat"
 ,"basket","basketball","bat","bathtub","beach","bear","beard","bed","bee","belt","bench","bicycle",
@@ -33,4 +84,8 @@ quick_draw_data_set=["aircraft carrier","airplane","alarm clock","ambulance","an
 "tshirt","umbrella","underwear","van","vase","violin","washing machine","watermelon","waterslide","whale",
 "wheel","windmill","wine bottle","wine glass","wristwatch","yoga","zebra","zigzag"]
 
+
 random_no = Math.floor((Math.random()*quick_draw_data_set.length)+1);
+console.log(quick_draw_data_set[random_no]);
+sketch = quick_draw_data_set[random_no]
+document.getElementById("sketch_to_be_drawn").value = "SKETCH TO BE DRAWN : " + sketch; 
