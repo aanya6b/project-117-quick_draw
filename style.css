@@ -3,7 +3,6 @@ body
     background-color: lightcoral;
 }
 
-
 #score
 {
     font-size: 20;
@@ -11,7 +10,6 @@ body
     color: aliceblue;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-
 
 #timer
 {
@@ -22,22 +20,9 @@ body
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-
 #sketch_to_be_drawn
 {
     color: deeppink;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 25;
-}
-
-
-h1 #show_sketch
-{
-    float: right;
-}
-
-
-h1
-{
-    background-color: aliceblue;
 }
