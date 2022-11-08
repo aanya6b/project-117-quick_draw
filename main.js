@@ -41,6 +41,13 @@ answer_holder = "";
 score = 0;
 sketch = "";
 
+
+function Clear()
+{
+    background("white");
+}
+
+
 function updateCanvas()
 {
     background("white");

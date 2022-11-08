@@ -26,3 +26,8 @@ body
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 25;
 }
+
+canvas
+{
+    margin-top: 160px;
+}
