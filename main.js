@@ -42,6 +42,12 @@ score = 0;
 sketch = "";
 
 
+random_no = Math.floor((Math.random()*quick_draw_data_set.length)+1); 
+console.log(quick_draw_data_set[random_no]); 
+sketch = quick_draw_data_set[random_no]; 
+document.getElementById("sketch_to_be_drawn").innerHTML = "SKETCH TO BE DRAWN : " + sketch;
+
+
 function Clear()
 {
     background("white");
@@ -77,7 +83,7 @@ function draw()
 {
     check_sketch();
 
-    if (drawn_sketch = sketch)
+    if (drawn_sketch == sketch)
     {
         answer_holder = "set";
         score = score + 1;
@@ -107,7 +113,7 @@ function check_sketch()
         timer_check = "Completed";
     }
 
-    if(timer_check == "completed" || answer_holder == "set")
+    if(timer_check == "Completed" || answer_holder == "set")
     {
         timer_check = "";
         answer_holder = "";
